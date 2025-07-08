@@ -1,0 +1,164 @@
+{
+    "models": {
+        "upscaler": "models/upscale_models/RealESRGAN_x4plus.pth",
+        "upscaler_backup": "models/upscale_models/RealESRGAN_x2plus.pth",
+        "ocr_languages": [
+            "en",
+            "de",
+            "ja"
+        ],
+        "style_loras": [
+            "models/loras/pokemon_tcg_style.safetensors",
+            "models/loras/trading_card_enhance.safetensors",
+            "models/loras/pixel_art_enhancement.safetensors"
+        ],
+        "background_removal": "models/background_removal/u2net.onnx",
+        "text_enhancement_models": [
+            "models/controlnet/control_v11p_sd15_lineart.pth",
+            "models/controlnet/control_v11f1e_sd15_tile.pth"
+        ]
+    },
+    "processing": {
+        "chunk_size": 4,
+        "gpu_memory_fraction": 0.8,
+        "quality_threshold": 0.7,
+        "max_resolution": [
+            2048,
+            3072
+        ],
+        "min_resolution": [
+            256,
+            384
+        ],
+        "supported_formats": [
+            "PNG",
+            "JPG",
+            "JPEG",
+            "WEBP"
+        ],
+        "output_format": "PNG",
+        "compression_quality": 95
+    },
+    "enhancement_settings": {
+        "default_upscale_factor": 2,
+        "max_upscale_factor": 4,
+        "edge_enhancement_strength": 1.5,
+        "text_sharpening_strength": 2.0,
+        "color_saturation_boost": 1.1,
+        "contrast_enhancement": 1.2,
+        "noise_reduction_strength": 0.3
+    },
+    "ocr_settings": {
+        "confidence_threshold": 0.5,
+        "text_regions": {
+            "card_name": {
+                "region": [
+                    0.1,
+                    0.05,
+                    0.9,
+                    0.15
+                ],
+                "priority": "high"
+            },
+            "card_type": {
+                "region": [
+                    0.1,
+                    0.15,
+                    0.9,
+                    0.25
+                ],
+                "priority": "medium"
+            },
+            "attack_text": {
+                "region": [
+                    0.1,
+                    0.6,
+                    0.9,
+                    0.85
+                ],
+                "priority": "high"
+            },
+            "stats": {
+                "region": [
+                    0.7,
+                    0.85,
+                    0.95,
+                    0.95
+                ],
+                "priority": "high"
+            },
+            "description": {
+                "region": [
+                    0.05,
+                    0.85,
+                    0.65,
+                    0.98
+                ],
+                "priority": "medium"
+            }
+        },
+        "text_preprocessing": {
+            "denoise": true,
+            "enhance_contrast": true,
+            "binarize": true
+        }
+    },
+    "style_analysis": {
+        "color_palette_size": 12,
+        "texture_analysis": true,
+        "artwork_region": [
+            0.1,
+            0.25,
+            0.9,
+            0.6
+        ],
+        "style_consistency_threshold": 0.7,
+        "pokemon_style_indicators": [
+            "gradient_backgrounds",
+            "holographic_effects",
+            "energy_symbols",
+            "border_patterns"
+        ]
+    },
+    "validation": {
+        "min_quality_score": 0.6,
+        "max_processing_time": 300,
+        "required_improvements": {
+            "resolution": 1.5,
+            "text_clarity": 1.2,
+            "edge_sharpness": 1.3
+        },
+        "save_analysis_reports": true,
+        "generate_comparison_images": true
+    },
+    "output": {
+        "directory_structure": {
+            "enhanced": "output/enhanced/",
+            "analysis": "output/analysis/",
+            "reports": "output/reports/",
+            "comparisons": "output/comparisons/"
+        },
+        "filename_pattern": "enhanced_{original_name}_{timestamp}",
+        "preserve_metadata": true,
+        "generate_thumbnails": true,
+        "thumbnail_size": [
+            256,
+            384
+        ]
+    },
+    "api_settings": {
+        "max_concurrent_requests": 4,
+        "timeout_seconds": 300,
+        "rate_limit_per_minute": 20,
+        "max_file_size_mb": 50,
+        "temp_directory": "temp/",
+        "cleanup_temp_files": true
+    },
+    "logging": {
+        "level": "INFO",
+        "file_rotation": true,
+        "max_log_size_mb": 100,
+        "backup_count": 5,
+        "detailed_timing": true
+    }
+}

@@ -1,0 +1,162 @@
+[
+  {
+    "image": "2D_Sprites_des_Mannes_im_Anzug.png",
+    "algorithm": "4-Corner",
+    "frame_count": 12,
+    "processing_time": 0.11674928665161133,
+    "foreground_ratio": 0.43718433380126953,
+    "success": true
+  },
+  {
+    "image": "2D_Sprites_des_Mannes_im_Anzug.png",
+    "algorithm": "16-Point",
+    "frame_count": 12,
+    "processing_time": 0.1503288745880127,
+    "foreground_ratio": 0.40794944763183594,
+    "success": true
+  },
+  {
+    "image": "Akrobatische_Wurfbewegungen_im_Anzug.png",
+    "algorithm": "4-Corner",
+    "frame_count": 12,
+    "processing_time": 0.09468698501586914,
+    "foreground_ratio": 0.4038352966308594,
+    "success": true
+  },
+  {
+    "image": "Akrobatische_Wurfbewegungen_im_Anzug.png",
+    "algorithm": "16-Point",
+    "frame_count": 12,
+    "processing_time": 0.1127324104309082,
+    "foreground_ratio": 0.37725830078125,
+    "success": true
+  },
+  {
+    "image": "Alterer_Kampfkunstler_im_Gehzyklus (1).png",
+    "algorithm": "4-Corner",
+    "frame_count": 10,
+    "processing_time": 0.1528186798095703,
+    "foreground_ratio": 0.4775352478027344,
+    "success": true
+  },
+  {
+    "image": "Alterer_Kampfkunstler_im_Gehzyklus (1).png",
+    "algorithm": "16-Point",
+    "frame_count": 12,
+    "processing_time": 0.1848745346069336,
+    "foreground_ratio": 0.4565582275390625,
+    "success": true
+  },
+  {
+    "image": "alterer_Kampfkunstler_im_Gehzyklus.png",
+    "algorithm": "4-Corner",
+    "frame_count": 10,
+    "processing_time": 0.16006231307983398,
+    "foreground_ratio": 0.4885406494140625,
+    "success": true
+  },
+  {
+    "image": "alterer_Kampfkunstler_im_Gehzyklus.png",
+    "algorithm": "16-Point",
+    "frame_count": 13,
+    "processing_time": 0.1934657096862793,
+    "foreground_ratio": 0.46387990315755206,
+    "success": true
+  },
+  {
+    "image": "Alterer_Kampfkunstler_in_Bewegung.png",
+    "algorithm": "4-Corner",
+    "frame_count": 10,
+    "processing_time": 0.15788030624389648,
+    "foreground_ratio": 0.48074976603190106,
+    "success": true
+  },
+  {
+    "image": "Alterer_Kampfkunstler_in_Bewegung.png",
+    "algorithm": "16-Point",
+    "frame_count": 10,
+    "processing_time": 0.3018193244934082,
+    "foreground_ratio": 0.4590066274007161,
+    "success": true
+  },
+  {
+    "image": "Alterer_Krieger_im_Gangzyklus.png",
+    "algorithm": "4-Corner",
+    "frame_count": 16,
+    "processing_time": 0.18999004364013672,
+    "foreground_ratio": 0.396542231241862,
+    "success": true
+  },
+  {
+    "image": "Alterer_Krieger_im_Gangzyklus.png",
+    "algorithm": "16-Point",
+    "frame_count": 181,
+    "processing_time": 0.22201061248779297,
+    "foreground_ratio": 0.3369973500569661,
+    "success": true
+  },
+  {
+    "image": "Alterer_Mann_im_Anzug_beim_Gehen.png",
+    "algorithm": "4-Corner",
+    "frame_count": 29,
+    "processing_time": 0.12686610221862793,
+    "foreground_ratio": 0.33385181427001953,
+    "success": true
+  },
+  {
+    "image": "Alterer_Mann_im_Anzug_beim_Gehen.png",
+    "algorithm": "16-Point",
+    "frame_count": 46,
+    "processing_time": 0.1438596248626709,
+    "foreground_ratio": 0.1285228729248047,
+    "success": true
+  },
+  {
+    "image": "Alterer_Mann_im_Anzug_mit_Handgeste.png",
+    "algorithm": "4-Corner",
+    "frame_count": 1,
+    "processing_time": 0.1268138885498047,
+    "foreground_ratio": 0.9981527328491211,
+    "success": true
+  },
+  {
+    "image": "Alterer_Mann_im_Anzug_mit_Handgeste.png",
+    "algorithm": "16-Point",
+    "frame_count": 2,
+    "processing_time": 0.1689746379852295,
+    "foreground_ratio": 0.8953361511230469,
+    "success": true
+  },
+  {
+    "image": "Alterer_Mann_in_fliessender_Bewegung.png",
+    "algorithm": "4-Corner",
+    "frame_count": 13,
+    "processing_time": 0.16633343696594238,
+    "foreground_ratio": 0.43853505452473956,
+    "success": true
+  },
+  {
+    "image": "Alterer_Mann_in_fliessender_Bewegung.png",
+    "algorithm": "16-Point",
+    "frame_count": 13,
+    "processing_time": 0.18909597396850586,
+    "foreground_ratio": 0.38000742594401044,
+    "success": true
+  },
+  {
+    "image": "Alterer_Mann_in_verschiedenen_Emotionen.png",
+    "algorithm": "4-Corner",
+    "frame_count": 1,
+    "processing_time": 0.10824775695800781,
+    "foreground_ratio": 0.9981212615966797,
+    "success": true
+  },
+  {
+    "image": "Alterer_Mann_in_verschiedenen_Emotionen.png",
+    "algorithm": "16-Point",
+    "frame_count": 27,
+    "processing_time": 0.13127732276916504,
+    "foreground_ratio": 0.8696069717407227,
+    "success": true
+  }
+]

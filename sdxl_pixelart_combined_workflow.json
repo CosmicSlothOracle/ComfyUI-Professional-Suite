@@ -1,0 +1,219 @@
+{
+    "1": {
+        "inputs": {
+            "image": "0e35f5b16b8ba60a10fdd360de075def_fast_transparent_converted.gif",
+            "upload": "image"
+        },
+        "class_type": "LoadImage",
+        "_meta": {
+            "title": "Load Input GIF"
+        }
+    },
+    "2": {
+        "inputs": {
+            "ckpt_name": "sdxl.safetensors"
+        },
+        "class_type": "CheckpointLoaderSimple",
+        "_meta": {
+            "title": "SDXL Checkpoint Loader"
+        }
+    },
+    "3": {
+        "inputs": {
+            "model": [
+                "2",
+                0
+            ],
+            "clip": [
+                "2",
+                1
+            ]
+        },
+        "class_type": "LoraLoader",
+        "_meta": {
+            "title": "Pixel Art LoRA Loader"
+        },
+        "widgets_values": [
+            "pixel-art-xl-lora.safetensors",
+            1.0,
+            1.0
+        ]
+    },
+    "4": {
+        "inputs": {
+            "text": "pixel art, 8bit style, retro game graphics, low resolution, limited color palette, sharp edges, nostalgic gaming aesthetic",
+            "clip": [
+                "3",
+                1
+            ]
+        },
+        "class_type": "CLIPTextEncode",
+        "_meta": {
+            "title": "Positive Prompt"
+        }
+    },
+    "5": {
+        "inputs": {
+            "text": "blurry, high resolution, photorealistic, smooth gradients, antialiasing, modern graphics",
+            "clip": [
+                "3",
+                1
+            ]
+        },
+        "class_type": "CLIPTextEncode",
+        "_meta": {
+            "title": "Negative Prompt"
+        }
+    },
+    "6": {
+        "inputs": {
+            "images": [
+                "1",
+                0
+            ],
+            "palette": "adaptive",
+            "pixelize": "OpenCV.kmeans.reduce",
+            "grid_pixelate_grid_scan_size": 4,
+            "resize_w": 512,
+            "resize_h": 512,
+            "reduce_colors_before_palette_swap": true,
+            "reduce_colors_max_colors": 32,
+            "apply_pixeldetector_max_colors": true,
+            "image_quantize_reduce_method": "MAXCOVERAGE",
+            "opencv_settings": "Optimized for quality with PP_CENTERS for consistent results",
+            "opencv_kmeans_centers": "PP_CENTERS",
+            "opencv_kmeans_attempts": 20,
+            "opencv_criteria_max_iterations": 30,
+            "cleanup": "Clean up colors for better quality",
+            "cleanup_colors": true,
+            "cleanup_pixels_threshold": 0.02,
+            "dither": "none"
+        },
+        "class_type": "PixelArtDetectorConverter",
+        "_meta": {
+            "title": "Pixel Art Converter"
+        }
+    },
+    "7": {
+        "inputs": {
+            "images": [
+                "6",
+                0
+            ],
+            "pattern_type": "bayer",
+            "pattern_order": 3,
+            "amount": 0.5
+        },
+        "class_type": "PixelArtAddDitherPattern",
+        "_meta": {
+            "title": "Add Dithering"
+        }
+    },
+    "8": {
+        "inputs": {
+            "vae": [
+                "2",
+                2
+            ],
+            "pixels": [
+                "7",
+                0
+            ]
+        },
+        "class_type": "VAEEncode",
+        "_meta": {
+            "title": "VAE Encode"
+        }
+    },
+    "9": {
+        "inputs": {
+            "model": [
+                "3",
+                0
+            ],
+            "positive": [
+                "4",
+                0
+            ],
+            "negative": [
+                "5",
+                0
+            ],
+            "latent_image": [
+                "8",
+                0
+            ],
+            "seed": 42,
+            "steps": 20,
+            "cfg": 7.0,
+            "sampler_name": "euler",
+            "scheduler": "normal",
+            "denoise": 0.75
+        },
+        "class_type": "KSampler",
+        "_meta": {
+            "title": "SDXL + LoRA Sampler"
+        }
+    },
+    "10": {
+        "inputs": {
+            "vae": [
+                "2",
+                2
+            ],
+            "samples": [
+                "9",
+                0
+            ]
+        },
+        "class_type": "VAEDecode",
+        "_meta": {
+            "title": "VAE Decode"
+        }
+    },
+    "11": {
+        "inputs": {
+            "images": [
+                "10",
+                0
+            ],
+            "filename_prefix": "sdxl_pixelart_enhanced",
+            "reduce_palette": true,
+            "reduce_palette_max_colors": 32,
+            "webp_mode": "lossless",
+            "compression": 100,
+            "save_jpg": false,
+            "save_exif": true,
+            "resize_w": 512,
+            "resize_h": 512
+        },
+        "class_type": "PixelArtDetectorSave",
+        "_meta": {
+            "title": "Save Enhanced Pixel Art"
+        }
+    },
+    "12": {
+        "inputs": {
+            "images": [
+                "7",
+                0
+            ]
+        },
+        "class_type": "PreviewImage",
+        "_meta": {
+            "title": "Preview Original Conversion"
+        }
+    },
+    "13": {
+        "inputs": {
+            "images": [
+                "10",
+                0
+            ]
+        },
+        "class_type": "PreviewImage",
+        "_meta": {
+            "title": "Preview SDXL Enhanced"
+        }
+    }
+}

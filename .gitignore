@@ -1,0 +1,89 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment
+venv/
+env/
+ENV/
+.env
+.venv
+venv.bak/
+env.bak/
+venv310/
+
+# IDEs and editors
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.project
+.settings/
+.classpath
+
+# ComfyUI specific
+output/
+input/
+temp/
+models/
+custom_nodes/*
+!custom_nodes/__init__.py
+!custom_nodes/README.md
+logs/
+config.json
+*.ckpt
+*.safetensors
+*.pth
+*.pt
+*.bin
+
+# Operating System
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Temporary files
+*.log
+*.tmp
+*.temp
+.cache/
+
+# Node modules
+node_modules/
+package-lock.json
+yarn.lock
+
+# Personal configuration
+config/local.json
+.env.local
+.env.*.local
+
+# Large media files
+*.mp4
+*.avi
+*.mov
+*.wav
+*.mp3
+*.zip
+*.tar.gz
+*.7z
+*.rar

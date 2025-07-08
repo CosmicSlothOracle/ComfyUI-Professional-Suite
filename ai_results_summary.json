@@ -1,0 +1,204 @@
+{
+  "total_ai_sprites": 29,
+  "sprite_types": 5,
+  "styles": [
+    "anime",
+    "pixel",
+    "enhanced"
+  ],
+  "weirdness_score": 140,
+  "rating": "🤯 SERIOUSLY FUCKING WEIRD!",
+  "sprite_breakdown": {
+    "attack": {
+      "anime": [
+        {
+          "filename": "AI_attack_anime__00001_.png",
+          "size_kb": 297.0,
+          "path": "ComfyUI_engine\\output\\AI_attack_anime__00001_.png"
+        },
+        {
+          "filename": "AI_attack_anime__00002_.png",
+          "size_kb": 336.5,
+          "path": "ComfyUI_engine\\output\\AI_attack_anime__00002_.png"
+        }
+      ],
+      "enhanced": [
+        {
+          "filename": "AI_attack_enhanced__00001_.png",
+          "size_kb": 296.8,
+          "path": "ComfyUI_engine\\output\\AI_attack_enhanced__00001_.png"
+        },
+        {
+          "filename": "AI_attack_enhanced__00002_.png",
+          "size_kb": 316.8,
+          "path": "ComfyUI_engine\\output\\AI_attack_enhanced__00002_.png"
+        }
+      ],
+      "pixel": [
+        {
+          "filename": "AI_attack_pixel__00001_.png",
+          "size_kb": 391.4,
+          "path": "ComfyUI_engine\\output\\AI_attack_pixel__00001_.png"
+        },
+        {
+          "filename": "AI_attack_pixel__00002_.png",
+          "size_kb": 275.9,
+          "path": "ComfyUI_engine\\output\\AI_attack_pixel__00002_.png"
+        }
+      ]
+    },
+    "idle": {
+      "anime": [
+        {
+          "filename": "AI_idle_anime__00001_.png",
+          "size_kb": 337.3,
+          "path": "ComfyUI_engine\\output\\AI_idle_anime__00001_.png"
+        },
+        {
+          "filename": "AI_idle_anime__00002_.png",
+          "size_kb": 337.7,
+          "path": "ComfyUI_engine\\output\\AI_idle_anime__00002_.png"
+        }
+      ],
+      "enhanced": [
+        {
+          "filename": "AI_idle_enhanced__00001_.png",
+          "size_kb": 341.2,
+          "path": "ComfyUI_engine\\output\\AI_idle_enhanced__00001_.png"
+        },
+        {
+          "filename": "AI_idle_enhanced__00002_.png",
+          "size_kb": 340.0,
+          "path": "ComfyUI_engine\\output\\AI_idle_enhanced__00002_.png"
+        }
+      ],
+      "pixel": [
+        {
+          "filename": "AI_idle_pixel__00001_.png",
+          "size_kb": 373.4,
+          "path": "ComfyUI_engine\\output\\AI_idle_pixel__00001_.png"
+        },
+        {
+          "filename": "AI_idle_pixel__00002_.png",
+          "size_kb": 300.8,
+          "path": "ComfyUI_engine\\output\\AI_idle_pixel__00002_.png"
+        }
+      ]
+    },
+    "intro": {
+      "anime": [
+        {
+          "filename": "AI_intro_anime__00001_.png",
+          "size_kb": 305.5,
+          "path": "ComfyUI_engine\\output\\AI_intro_anime__00001_.png"
+        },
+        {
+          "filename": "AI_intro_anime__00002_.png",
+          "size_kb": 392.9,
+          "path": "ComfyUI_engine\\output\\AI_intro_anime__00002_.png"
+        }
+      ],
+      "enhanced": [
+        {
+          "filename": "AI_intro_enhanced__00001_.png",
+          "size_kb": 318.6,
+          "path": "ComfyUI_engine\\output\\AI_intro_enhanced__00001_.png"
+        }
+      ],
+      "pixel": [
+        {
+          "filename": "AI_intro_pixel__00001_.png",
+          "size_kb": 370.1,
+          "path": "ComfyUI_engine\\output\\AI_intro_pixel__00001_.png"
+        },
+        {
+          "filename": "AI_intro_pixel__00002_.png",
+          "size_kb": 332.4,
+          "path": "ComfyUI_engine\\output\\AI_intro_pixel__00002_.png"
+        }
+      ]
+    },
+    "jump": {
+      "anime": [
+        {
+          "filename": "AI_jump_anime__00001_.png",
+          "size_kb": 312.9,
+          "path": "ComfyUI_engine\\output\\AI_jump_anime__00001_.png"
+        },
+        {
+          "filename": "AI_jump_anime__00002_.png",
+          "size_kb": 287.7,
+          "path": "ComfyUI_engine\\output\\AI_jump_anime__00002_.png"
+        }
+      ],
+      "enhanced": [
+        {
+          "filename": "AI_jump_enhanced__00001_.png",
+          "size_kb": 346.6,
+          "path": "ComfyUI_engine\\output\\AI_jump_enhanced__00001_.png"
+        },
+        {
+          "filename": "AI_jump_enhanced__00002_.png",
+          "size_kb": 340.7,
+          "path": "ComfyUI_engine\\output\\AI_jump_enhanced__00002_.png"
+        }
+      ],
+      "pixel": [
+        {
+          "filename": "AI_jump_pixel__00001_.png",
+          "size_kb": 374.6,
+          "path": "ComfyUI_engine\\output\\AI_jump_pixel__00001_.png"
+        },
+        {
+          "filename": "AI_jump_pixel__00002_.png",
+          "size_kb": 349.9,
+          "path": "ComfyUI_engine\\output\\AI_jump_pixel__00002_.png"
+        }
+      ]
+    },
+    "walk": {
+      "anime": [
+        {
+          "filename": "AI_walk_anime__00001_.png",
+          "size_kb": 353.4,
+          "path": "ComfyUI_engine\\output\\AI_walk_anime__00001_.png"
+        },
+        {
+          "filename": "AI_walk_anime__00002_.png",
+          "size_kb": 383.2,
+          "path": "ComfyUI_engine\\output\\AI_walk_anime__00002_.png"
+        }
+      ],
+      "enhanced": [
+        {
+          "filename": "AI_walk_enhanced__00001_.png",
+          "size_kb": 336.0,
+          "path": "ComfyUI_engine\\output\\AI_walk_enhanced__00001_.png"
+        },
+        {
+          "filename": "AI_walk_enhanced__00002_.png",
+          "size_kb": 371.1,
+          "path": "ComfyUI_engine\\output\\AI_walk_enhanced__00002_.png"
+        }
+      ],
+      "pixel": [
+        {
+          "filename": "AI_walk_pixel__00001_.png",
+          "size_kb": 395.1,
+          "path": "ComfyUI_engine\\output\\AI_walk_pixel__00001_.png"
+        },
+        {
+          "filename": "AI_walk_pixel__00002_.png",
+          "size_kb": 242.1,
+          "path": "ComfyUI_engine\\output\\AI_walk_pixel__00002_.png"
+        }
+      ]
+    }
+  },
+  "recommendations": [
+    "Schaue dir die generierten Bilder an",
+    "Vergleiche Styles",
+    "Wähle beste Sprites aus",
+    "Starte weitere Generierungen"
+  ]
+}

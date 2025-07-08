@@ -1,0 +1,86 @@
+{
+  "styles": {
+    "modern": {
+      "name": "Modern Pixel Art",
+      "description": "Hochauflösende, moderne Pixel-Art mit klaren Kanten",
+      "resolution": [512, 512],
+      "colors_max": 64,
+      "dither": "none",
+      "palette": "GAMEBOY",
+      "cleanup": true,
+      "cleanup_threshold": 0.02,
+      "pixelize_method": "Image.quantize",
+      "reduce_colors": true,
+      "output_format": "webp"
+    },
+    "retro": {
+      "name": "Retro 8-Bit Style",
+      "description": "Klassischer 8-Bit-Look mit NES/GameBoy-Palette",
+      "resolution": [256, 256],
+      "colors_max": 16,
+      "dither": "floyd-steinberg",
+      "palette": "NES",
+      "cleanup": true,
+      "cleanup_threshold": 0.05,
+      "pixelize_method": "Image.quantize",
+      "reduce_colors": true,
+      "output_format": "png"
+    },
+    "high_res": {
+      "name": "High Resolution Pixel Art",
+      "description": "Hochauflösende Pixel-Art für detaillierte Arbeiten",
+      "resolution": [768, 768],
+      "colors_max": 128,
+      "dither": "none",
+      "palette": "adaptive",
+      "cleanup": false,
+      "cleanup_threshold": 0.01,
+      "pixelize_method": "Image.quantize",
+      "reduce_colors": true,
+      "output_format": "webp"
+    },
+    "sprite": {
+      "name": "Sprite Sheet Optimized",
+      "description": "Optimiert für Sprite-Sheets und kleine Grafiken",
+      "resolution": [64, 64],
+      "colors_max": 32,
+      "dither": "bayer-2",
+      "palette": "NES",
+      "cleanup": true,
+      "cleanup_threshold": 0.03,
+      "pixelize_method": "Grid.pixelate",
+      "reduce_colors": true,
+      "output_format": "png"
+    },
+    "animated": {
+      "name": "Animation Friendly",
+      "description": "Konsistente Pixel-Art für Frame-by-Frame-Animationen",
+      "resolution": [512, 512],
+      "colors_max": 48,
+      "dither": "bayer-4",
+      "palette": "adaptive",
+      "cleanup": true,
+      "cleanup_threshold": 0.025,
+      "pixelize_method": "Image.quantize",
+      "reduce_colors": true,
+      "output_format": "webp"
+    }
+  },
+  "palettes": {
+    "NES": {
+      "type": "fixed",
+      "colors": 64,
+      "description": "Nintendo Entertainment System Palette"
+    },
+    "GAMEBOY": {
+      "type": "fixed",
+      "colors": 4,
+      "description": "Classic Game Boy Green Palette"
+    },
+    "adaptive": {
+      "type": "adaptive",
+      "colors": "variable",
+      "description": "Adaptive Palette basierend auf Input-Bild"
+    }
+  }
+}

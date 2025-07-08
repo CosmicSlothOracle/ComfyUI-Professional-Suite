@@ -1,0 +1,160 @@
+{
+  "workflow_name": "Ultimate Sprite Processing",
+  "description": "State-of-the-art sprite processing with AI analysis",
+  "version": "1.0.0",
+  "nodes": {
+    "1": {
+      "inputs": {
+        "image": "INPUT_SPRITE.png",
+        "upload": "image"
+      },
+      "class_type": "LoadImage",
+      "_meta": {
+        "title": "\ud83c\udfaf Load Sprite"
+      }
+    },
+    "2": {
+      "inputs": {
+        "image": [
+          "1",
+          0
+        ],
+        "model": "BiRefNet-HR",
+        "post_processing": true
+      },
+      "class_type": "BRIA_RMBG_BackgroundRemoval",
+      "_meta": {
+        "title": "\ud83c\udfad Perfect Background Removal"
+      }
+    },
+    "3": {
+      "inputs": {
+        "image": [
+          "2",
+          0
+        ],
+        "enable_pose_detection": true,
+        "enable_depth_analysis": true
+      },
+      "class_type": "AI_SpriteAnalyzer",
+      "_meta": {
+        "title": "\ud83e\udde0 AI Analysis"
+      }
+    },
+    "4": {
+      "inputs": {
+        "image": [
+          "3",
+          0
+        ],
+        "mask": [
+          "2",
+          1
+        ],
+        "intelligent_extraction": true
+      },
+      "class_type": "AdvancedFrameExtractor",
+      "_meta": {
+        "title": "\u2702\ufe0f Frame Extraction"
+      }
+    },
+    "5": {
+      "inputs": {
+        "frames": [
+          "4",
+          0
+        ],
+        "ai_analysis": [
+          "3",
+          1
+        ]
+      },
+      "class_type": "MotionAnalyzer",
+      "_meta": {
+        "title": "\ud83c\udfac Motion Analysis"
+      }
+    },
+    "6": {
+      "inputs": {
+        "frames": [
+          "4",
+          0
+        ],
+        "scale_factor": 2,
+        "model": "Real-ESRGAN"
+      },
+      "class_type": "StateOfTheArtUpscaler",
+      "_meta": {
+        "title": "\ud83d\udcc8 2x Upscaling"
+      }
+    },
+    "7": {
+      "inputs": {
+        "frames": [
+          "4",
+          0
+        ],
+        "motion_analysis": [
+          "5",
+          0
+        ],
+        "filename_prefix": "frame_1x_"
+      },
+      "class_type": "SaveFrames",
+      "_meta": {
+        "title": "\ud83d\udcbe Save Frames 1x"
+      }
+    },
+    "8": {
+      "inputs": {
+        "frames": [
+          "6",
+          0
+        ],
+        "motion_analysis": [
+          "5",
+          0
+        ],
+        "filename_prefix": "frame_2x_"
+      },
+      "class_type": "SaveFrames",
+      "_meta": {
+        "title": "\ud83d\udcbe Save Frames 2x"
+      }
+    },
+    "9": {
+      "inputs": {
+        "frames": [
+          "4",
+          0
+        ],
+        "motion_analysis": [
+          "5",
+          0
+        ],
+        "filename_prefix": "animated_1x"
+      },
+      "class_type": "SaveAnimatedGIF",
+      "_meta": {
+        "title": "\ud83c\udfac Save GIF 1x"
+      }
+    },
+    "10": {
+      "inputs": {
+        "frames": [
+          "6",
+          0
+        ],
+        "motion_analysis": [
+          "5",
+          0
+        ],
+        "filename_prefix": "animated_2x"
+      },
+      "class_type": "SaveAnimatedGIF",
+      "_meta": {
+        "title": "\ud83c\udfac Save GIF 2x"
+      }
+    }
+  }
+}

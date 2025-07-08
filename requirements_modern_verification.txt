@@ -1,0 +1,39 @@
+# Modern Pokemon Card Authenticity Verification System
+# Core deep learning frameworks
+torch>=2.1.0
+torchvision>=0.16.0
+transformers>=4.35.0
+diffusers>=0.24.0
+
+# Vision Transformer and modern models
+timm>=0.9.12
+opencv-python>=4.8.1
+pillow>=10.1.0
+
+# Hugging Face ecosystem
+accelerate>=0.24.0
+datasets>=2.14.0
+peft>=0.6.0  # For LoRA implementations
+
+# Computer vision and image processing
+scikit-image>=0.21.0
+matplotlib>=3.8.0
+seaborn>=0.12.0
+numpy>=1.24.0
+scipy>=1.11.0
+
+# Color analysis and perceptual metrics
+colorspacious>=1.1.2
+colour-science>=0.4.3
+
+# Feature extraction and similarity
+faiss-cpu>=1.7.4
+imagehash>=4.3.1
+
+# Utilities and performance
+tqdm>=4.66.0
+wandb>=0.16.0  # For experiment tracking
+safetensors>=0.4.0
+
+# Optional GPU acceleration
+# faiss-gpu>=1.7.4  # Uncomment if using GPU for similarity search

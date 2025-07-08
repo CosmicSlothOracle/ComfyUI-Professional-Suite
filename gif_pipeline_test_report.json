@@ -1,0 +1,25 @@
+{
+  "test_summary": {
+    "total_tests": 7,
+    "passed_tests": 5,
+    "failed_tests": 2,
+    "success_rate": 0.7142857142857143
+  },
+  "performance_metrics": {
+    "Import Test": 0.10082507133483887,
+    "GIF Analyzer Test": 6.931002378463745,
+    "Motion Extractor Test": 0.01940011978149414,
+    "Pipeline Manager Test": 0.05216479301452637,
+    "Performance Test": 0.0036821365356445312,
+    "Quality Assessment": 0.006374359130859375,
+    "Integration Test": 0.6301627159118652
+  },
+  "quality_scores": {
+    "performance": 1.0,
+    "overall": 0.8416666666666667,
+    "integration": 0.9999999999999999
+  },
+  "errors": [],
+  "timestamp": 1750628684.6871703,
+  "reference_gif": "input\\be28e91b47891c6861207edd5bca8e6c_fast_transparent_converted.gif"
+}

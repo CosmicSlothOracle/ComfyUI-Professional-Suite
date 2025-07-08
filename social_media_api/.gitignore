@@ -1,0 +1,67 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+venv/
+.venv/
+.env
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+
+# Project specific
+social_media_api/logs/*
+!social_media_api/logs/.gitkeep
+social_media_api/output/videos/*
+!social_media_api/output/videos/.gitkeep
+social_media_api/output/reports/*
+!social_media_api/output/reports/.gitkeep
+social_media_api/temp/*
+!social_media_api/temp/.gitkeep
+
+# Config files with sensitive data
+social_media_api/config/google_credentials.json
+
+# Example outputs
+examples/output/*
+!examples/output/final_report.json
+examples/error_logs/*
+!examples/error_logs/.gitkeep
+
+# Generated videos
+*.mp4
+*.mov
+*.avi
+*.webm
+
+# Generated thumbnails
+*.jpg
+*.jpeg
+*.png
+*.gif
+
+# Temporary files
+*.tmp
+*.bak
+*.log

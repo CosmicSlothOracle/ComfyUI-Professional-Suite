@@ -1,0 +1,67 @@
+{
+    "1": {
+        "inputs": {
+            "image": "Mann_steigt_aus_Limousine_aus.png",
+            "upload": "image"
+        },
+        "class_type": "LoadImage",
+        "_meta": {
+            "title": "Load Spritesheet"
+        }
+    },
+    "2": {
+        "inputs": {
+            "image": [
+                "1",
+                0
+            ],
+            "background_tolerance": 25,
+            "min_frame_area": 800,
+            "corner_detection_size": 30.0,
+            "morphology_kernel_size": 3,
+            "output_gif": true,
+            "gif_duration": 500
+        },
+        "class_type": "IntelligentSpritesheetProcessor",
+        "_meta": {
+            "title": "🎮 Intelligent Spritesheet Processor"
+        }
+    },
+    "3": {
+        "inputs": {
+            "images": [
+                "2",
+                0
+            ],
+            "filename_prefix": "extracted_sprite_frame"
+        },
+        "class_type": "SaveImage",
+        "_meta": {
+            "title": "Save Extracted Frames"
+        }
+    },
+    "4": {
+        "inputs": {
+            "text": [
+                "2",
+                1
+            ]
+        },
+        "class_type": "ShowText",
+        "_meta": {
+            "title": "Analysis Report"
+        }
+    },
+    "5": {
+        "inputs": {
+            "anything": [
+                "2",
+                2
+            ]
+        },
+        "class_type": "DebugPrint",
+        "_meta": {
+            "title": "Frame Count"
+        }
+    }
+}

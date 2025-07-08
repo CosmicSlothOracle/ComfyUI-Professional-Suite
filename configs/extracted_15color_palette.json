@@ -1,0 +1,157 @@
+{
+  "name": "extracted_15color_modern",
+  "description": "Extrahierte 15-Farben-Palette aus pixel_modern_0ea53a3cdbfdcf14caf1c8cccdb60143.gif",
+  "total_colors": 15,
+  "categories": {
+    "dunkel_monochrom": {
+      "description": "Dunkel & Monochrom (1-2)",
+      "colors": [
+        {
+          "id": 1,
+          "rgb": [8, 12, 16],
+          "hex": "#080C10",
+          "description": "Tiefes Schwarz mit leichtem Blaustich"
+        },
+        {
+          "id": 2,
+          "rgb": [25, 15, 35],
+          "hex": "#190F23",
+          "description": "Sehr dunkles Lila"
+        }
+      ]
+    },
+    "warme_toene": {
+      "description": "Warme Töne (3-5)",
+      "colors": [
+        {
+          "id": 3,
+          "rgb": [85, 25, 35],
+          "hex": "#551923",
+          "description": "Dunkles Rot (weinrot)"
+        },
+        {
+          "id": 4,
+          "rgb": [200, 100, 45],
+          "hex": "#C8642D",
+          "description": "Sattes Orange"
+        },
+        {
+          "id": 5,
+          "rgb": [235, 220, 180],
+          "hex": "#EBDCB4",
+          "description": "Blasses Gelb/Beige"
+        }
+      ]
+    },
+    "gruentoene": {
+      "description": "Grüntöne (6-7)",
+      "colors": [
+        {
+          "id": 6,
+          "rgb": [145, 220, 85],
+          "hex": "#91DC55",
+          "description": "Helles Apfelgrün"
+        },
+        {
+          "id": 7,
+          "rgb": [45, 160, 95],
+          "hex": "#2DA05F",
+          "description": "Satteres Smaragdgrün"
+        }
+      ]
+    },
+    "blautoene": {
+      "description": "Blautöne (8-11)",
+      "colors": [
+        {
+          "id": 8,
+          "rgb": [35, 85, 95],
+          "hex": "#23555F",
+          "description": "Dunkles Grün-Blau"
+        },
+        {
+          "id": 9,
+          "rgb": [25, 45, 85],
+          "hex": "#192D55",
+          "description": "Navyblau"
+        },
+        {
+          "id": 10,
+          "rgb": [65, 115, 180],
+          "hex": "#4173B4",
+          "description": "Mittelblau"
+        },
+        {
+          "id": 11,
+          "rgb": [85, 195, 215],
+          "hex": "#55C3D7",
+          "description": "Cyan / Türkis"
+        }
+      ]
+    },
+    "kuehle_grautoene": {
+      "description": "Kühle Grautöne (12-14)",
+      "colors": [
+        {
+          "id": 12,
+          "rgb": [95, 105, 125],
+          "hex": "#5F697D",
+          "description": "Graublau"
+        },
+        {
+          "id": 13,
+          "rgb": [85, 75, 95],
+          "hex": "#554B5F",
+          "description": "Graulila"
+        },
+        {
+          "id": 14,
+          "rgb": [45, 55, 75],
+          "hex": "#2D374B",
+          "description": "Graphitblau"
+        }
+      ]
+    },
+    "letzter_ton": {
+      "description": "Letzter Ton (15)",
+      "colors": [
+        {
+          "id": 15,
+          "rgb": [12, 8, 8],
+          "hex": "#0C0808",
+          "description": "Fast Schwarz, leicht abweichend von #1"
+        }
+      ]
+    }
+  },
+  "palette_array": [
+    [8, 12, 16],
+    [25, 15, 35],
+    [85, 25, 35],
+    [200, 100, 45],
+    [235, 220, 180],
+    [145, 220, 85],
+    [45, 160, 95],
+    [35, 85, 95],
+    [25, 45, 85],
+    [65, 115, 180],
+    [85, 195, 215],
+    [95, 105, 125],
+    [85, 75, 95],
+    [45, 55, 75],
+    [12, 8, 8]
+  ],
+  "workflow_config": {
+    "resolution": [512, 512],
+    "pixelize_size": 4,
+    "color_matching": "euclidean_distance",
+    "preserve_animation": true,
+    "optimize_gif": true
+  },
+  "source_analysis": {
+    "source_file": "pixel_modern_0ea53a3cdbfdcf14caf1c8cccdb60143.gif",
+    "extraction_method": "dominant_color_analysis",
+    "frame_sampling": "every_3rd_frame",
+    "color_space": "RGB"
+  }
+}
