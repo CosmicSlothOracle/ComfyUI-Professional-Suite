@@ -1,0 +1,133 @@
+{
+    "workflow_name": "Vaporwave Ultimate Transformation",
+    "description": "Professional vaporwave video transformation with authentic 80s/90s aesthetics",
+    "version": "1.0.0",
+    "nodes": {
+        "1": {
+            "inputs": {
+                "video": "INPUT_VIDEO.mp4",
+                "upload": "video"
+            },
+            "class_type": "LoadVideo",
+            "_meta": {
+                "title": "📹 Load Video"
+            }
+        },
+        "2": {
+            "inputs": {
+                "video": [
+                    "1",
+                    0
+                ],
+                "style": "neon",
+                "effect_intensity": 0.8
+            },
+            "class_type": "VaporwaveProcessor",
+            "_meta": {
+                "title": "🌈 Vaporwave Processing"
+            }
+        },
+        "3": {
+            "inputs": {
+                "video": [
+                    "2",
+                    0
+                ],
+                "color_grading": "neon_synthwave",
+                "contrast": 1.4,
+                "saturation": 2.5,
+                "hue_shift": 300
+            },
+            "class_type": "NeonColorGrading",
+            "_meta": {
+                "title": "🎨 Neon Color Grading"
+            }
+        },
+        "4": {
+            "inputs": {
+                "video": [
+                    "3",
+                    0
+                ],
+                "glow_intensity": 0.6,
+                "grid_overlay": true,
+                "vhs_effects": true
+            },
+            "class_type": "RetroEffects",
+            "_meta": {
+                "title": "✨ Retro Effects"
+            }
+        },
+        "5": {
+            "inputs": {
+                "video": [
+                    "4",
+                    0
+                ],
+                "filename_prefix": "vaporwave_neon"
+            },
+            "class_type": "SaveVideo",
+            "_meta": {
+                "title": "💾 Save Vaporwave Video"
+            }
+        },
+        "6": {
+            "inputs": {
+                "video": [
+                    "1",
+                    0
+                ],
+                "style": "retro",
+                "effect_intensity": 0.7
+            },
+            "class_type": "VaporwaveProcessor",
+            "_meta": {
+                "title": "🌅 Retro Sunset Processing"
+            }
+        },
+        "7": {
+            "inputs": {
+                "video": [
+                    "6",
+                    0
+                ],
+                "color_grading": "retro_sunset",
+                "contrast": 1.3,
+                "saturation": 2.0,
+                "hue_shift": 20
+            },
+            "class_type": "RetroColorGrading",
+            "_meta": {
+                "title": "🌅 Sunset Color Grading"
+            }
+        },
+        "8": {
+            "inputs": {
+                "video": [
+                    "7",
+                    0
+                ],
+                "vhs_degradation": true,
+                "scanlines": true,
+                "noise_level": 0.3
+            },
+            "class_type": "VHSEffects",
+            "_meta": {
+                "title": "📺 VHS Effects"
+            }
+        },
+        "9": {
+            "inputs": {
+                "video": [
+                    "8",
+                    0
+                ],
+                "filename_prefix": "vaporwave_retro"
+            },
+            "class_type": "SaveVideo",
+            "_meta": {
+                "title": "💾 Save Retro Video"
+            }
+        }
+    }
+}

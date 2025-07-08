@@ -1,0 +1,164 @@
+{
+    "workflow_name": "Pixel Art Video Processing",
+    "description": "Real-time pixel art conversion with multiple palette support",
+    "version": "1.0.0",
+    "nodes": {
+        "1": {
+            "inputs": {
+                "video": "INPUT_VIDEO.mp4",
+                "upload": "video"
+            },
+            "class_type": "LoadVideo",
+            "_meta": {
+                "title": "📹 Load Video"
+            }
+        },
+        "2": {
+            "inputs": {
+                "video": [
+                    "1",
+                    0
+                ]
+            },
+            "class_type": "GetVideoComponents",
+            "_meta": {
+                "title": "🎬 Extract Frames"
+            }
+        },
+        "3": {
+            "inputs": {
+                "image": [
+                    "2",
+                    0
+                ],
+                "palette": "gameboy",
+                "color_count": 4,
+                "dithering": "floyd_steinberg"
+            },
+            "class_type": "PixelArtDetector",
+            "_meta": {
+                "title": "🎮 GameBoy Style"
+            }
+        },
+        "4": {
+            "inputs": {
+                "image": [
+                    "2",
+                    0
+                ],
+                "palette": "nes",
+                "color_count": 8,
+                "dithering": "ordered"
+            },
+            "class_type": "PixelArtDetector",
+            "_meta": {
+                "title": "🎨 NES Style"
+            }
+        },
+        "5": {
+            "inputs": {
+                "image": [
+                    "2",
+                    0
+                ],
+                "palette": "snes",
+                "color_count": 16,
+                "dithering": "floyd_steinberg"
+            },
+            "class_type": "PixelArtDetector",
+            "_meta": {
+                "title": "🌈 SNES Style"
+            }
+        },
+        "6": {
+            "inputs": {
+                "frames": [
+                    "3",
+                    0
+                ],
+                "fps": [
+                    "2",
+                    1
+                ],
+                "filename_prefix": "pixel_art_gameboy"
+            },
+            "class_type": "SaveAnimatedGIF",
+            "_meta": {
+                "title": "💾 Save GameBoy GIF"
+            }
+        },
+        "7": {
+            "inputs": {
+                "frames": [
+                    "4",
+                    0
+                ],
+                "fps": [
+                    "2",
+                    1
+                ],
+                "filename_prefix": "pixel_art_nes"
+            },
+            "class_type": "SaveAnimatedGIF",
+            "_meta": {
+                "title": "💾 Save NES GIF"
+            }
+        },
+        "8": {
+            "inputs": {
+                "frames": [
+                    "5",
+                    0
+                ],
+                "fps": [
+                    "2",
+                    1
+                ],
+                "filename_prefix": "pixel_art_snes"
+            },
+            "class_type": "SaveAnimatedGIF",
+            "_meta": {
+                "title": "💾 Save SNES GIF"
+            }
+        },
+        "9": {
+            "inputs": {
+                "frames": [
+                    "3",
+                    0
+                ],
+                "filename_prefix": "gameboy_frame"
+            },
+            "class_type": "SaveImage",
+            "_meta": {
+                "title": "💾 Save GameBoy Frames"
+            }
+        },
+        "10": {
+            "inputs": {
+                "frames": [
+                    "4",
+                    0
+                ],
+                "filename_prefix": "nes_frame"
+            },
+            "class_type": "SaveImage",
+            "_meta": {
+                "title": "💾 Save NES Frames"
+            }
+        },
+        "11": {
+            "inputs": {
+                "frames": [
+                    "5",
+                    0
+                ],
+                "filename_prefix": "snes_frame"
+            },
+            "class_type": "SaveImage",
+            "_meta": {
+                "title": "💾 Save SNES Frames"
+            }
+        }
+    }
+}
